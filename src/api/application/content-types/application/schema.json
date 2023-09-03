@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "Applications",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Information": {
+      "type": "text"
+    },
+    "applications_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::type.type"
+    }
+  }
+}

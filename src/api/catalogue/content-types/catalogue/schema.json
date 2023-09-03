@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalogues",
+  "info": {
+    "singularName": "catalogue",
+    "pluralName": "catalogues",
+    "displayName": "Catalogues",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "advantages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::advantage.advantage"
+    }
+  }
+}
